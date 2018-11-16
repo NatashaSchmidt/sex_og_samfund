@@ -116,61 +116,120 @@ body {
 #settings {}
 
 
-#indstillinger {}
+#indstillinger {
+    background-image: url(billeder/settingsk%C3%A6rm.svg);
+    background-size: 100%;
+    width: 50vw;
+    height: 33.1vw;
+    position: absolute;
+    top: 11vw;
+    left: 27vw;
+}
 
 
-#kryds {}
+#kryds {
+    background-image: url(billeder/kryds.svg);
+    background-size: 100%;
+    width: 7.2vw;
+    height: 7.2vw;
+    position: absolute;
+    top: 12vw;
+    left: 68vw;
+}
 
 
 #setting_effekt_sound {}
 
 
-#effekter {}
-
-
-#effekter_sprite {}
-
-
-#setting_music {}
-
-.setting_music_kf {
-    animation-name: setting_music_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(5);
+#effekter {
+    background-image: url(billeder/sound.svg);
+    background-size: 100%;
+    width: 10vw;
+    height: 7vw;
+    position: absolute;
+    top: 21vw;
+    left: 32vw;
+    z-index: 3;
 }
 
-@keyframes setting_music_kf {
+
+#effekter_sprite,
+#music_sprite {
+    background-size: 465% 100%;
+    width: 7vw;
+    height: 7vw;
+    background-image: url(billeder/gr%C3%B8nknap.svg);
+
+}
+
+
+#effekter_sprite {
+    top: 33vw;
+    left: 55vw;
+    position: absolute;
+    z-index: 3;
+
+}
+
+#music_sprite {
+    top: 22vw;
+    left: 55vw;
+    position: absolute;
+    z-index: 3;
+
+}
+
+.on {
+    background-position: 0;
+    /*    background-color: green;*/
+
+}
+
+.off {
+    background-position: -400% 0;
+    /*    background-color: red;*/
+
+}
+
+.off_on {
+    animation-name: on_off_kf;
+    animation-direction: reverse;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    /* det første step, altså det billede den starter på, tæller ikke med i "steps" */
+    animation-timing-function: steps(4);
+}
+
+.on_off {
+    animation-name: on_off_kf;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    /* det første step, altså det billede den starter på, tæller ikke med i "steps" */
+    animation-timing-function: steps(4);
+
+}
+
+@keyframes on_off_kf {
     0% {
-        background-position: 0% 0%;
+        background-position: 0 0;
     }
 
     100% {
-        background-position: -500% 0%;
+        background-position: -400% 0;
     }
 }
 
 
-#music {}
-
-
-#music_sprite {}
-
-.music_sprite_kf {
-    animation-name: music_sprite_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(5);
-}
-
-@keyframes music_sprite_kf {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: -500% 0%;
-    }
+#music {
+    background-image: url(billeder/volume.svg);
+    background-size: 100%;
+    width: 10vw;
+    height: 7vw;
+    position: absolute;
+    top: 32vw;
+    left: 32vw;
 }
 
 /* ----------VÆLG KØN---------------- */
@@ -185,66 +244,27 @@ body {
 
 }
 
-#pige {}
-
-#pigeblink_sprite {
-    background-size: 500% 100%;
-    width: 31vw;
-    height: 30vw;
-    background-image: url(billeder/pige_sprite.svg);
-    display: inline-block;
+#pige {
+    background-image: url(billeder/pige.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 26vw;
     position: absolute;
-    z-index: 2;
-    top: 18vw;
-    left: 10vw;
+    top: 22.18vw;
+    left: 19vw;
+
 }
 
-.pigeblink_sprite_kf {
-    animation-name: pigeblink_sprite_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(5);
-}
-
-@keyframes pigeblink_sprite_kf {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: -500% 0%;
-    }
-}
-
-#dreng {}
-
-#drengeblink_sprite {
-    background-size: 500% 100%;
-    width: 31vw;
-    height: 30vw;
-    background-image: url(billeder/dreng_sprite2.svg);
-    display: inline-block;
+#dreng {
+    background-image: url(billeder/dreng.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 26vw;
     position: absolute;
-    z-index: 2;
-    top: 19vw;
-    left: 57vw;
-}
-
-.drengeblink_sprite_kf {
-    animation-name: drengeblink_sprite_kf;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(5);
-}
-
-@keyframes drengeblink_sprite_kf {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: -500% 0%;
-    }
+    top: 24.54vw;
+    left: 65.1vw;
 }
 
 
@@ -276,6 +296,7 @@ body {
     position: absolute;
     left: 55vw;
     top: 1.5vw;
+    z-index: 3;
     animation-name: haand_kf;
 }
 
@@ -285,82 +306,248 @@ body {
     100% {}
 }
 
-#lipstick {}
+#lipstick {
+    background-image: url(billeder/l%C3%A6bestift.svg);
+    background-size: 100%;
+    width: 8vw;
+    height: 10vw;
+    position: absolute;
+    left: 15vw;
+    top: 23vw;
+    z-index: 2;
+}
 
-#pudder {}
+#pudder {
+    background-image: url(billeder/pudder.svg);
+    background-size: 100%;
+    width: 10vw;
+    height: 8vw;
+    position: absolute;
+    left: 35vw;
+    top: 30vw;
+    z-index: 2;
+}
 
-#pin {}
+#pin {
+    background-image: url(billeder/h%C3%A5tn%C3%A5le%20.svg);
+    background-size: 100%;
+    width: 5vw;
+    height: 1.5vw;
+    position: absolute;
+    left: 26vw;
+    top: 38vw;
+    z-index: 2;
+    transform: rotate(-20deg);
+}
 
-#blyant {}
+#blyant {
+    background-image: url(billeder/blyant.svg);
+    background-size: 100%;
+    width: 4.5vw;
+    height: 15vw;
+    position: absolute;
+    left: 50vw;
+    top: 35vw;
+    z-index: 2;
+    transform: rotate(-80deg);
+}
 
-#eraser {}
+#eraser {
+    background-image: url(billeder/viskel%C3%A6der.svg);
+    background-size: 100%;
+    width: 12vw;
+    height: 7vw;
+    position: absolute;
+    left: 34vw;
+    top: 34vw;
+    z-index: 2;
+}
 
-#besked1pige {}
+#besked1pige {
+    background-image: url(billeder/bh_pigesvg.svg);
+    background-size: 100%;
+    width: 28vw;
+    height: 32vw;
+    position: absolute;
+    left: 60.3vw;
+    top: 8.5vw;
+    z-index: 3;
+}
 
-#besked2pige {}
+#besked2pige {
+    background-image: url(billeder/dickpic_pige.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30.9vw;
+    height: 37vw;
+    position: absolute;
+    left: 58.9vw;
+    top: 8.2vw;
+    z-index: 3;
+}
 
-#besked1dreng {}
+#besked1dreng {
+    background-image: url(billeder/n%C3%B8gen_pige.svg);
+    background-size: 100%;
+    width: 36vw;
+    height: 37vw;
+    position: absolute;
+    left: 57.4vw;
+    top: 3.5vw;
+    z-index: 3;
 
-#besked2dreng {}
+}
+
+#besked2dreng {
+    background-image: url(billeder/dickpic_dreng_1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 27.6vw;
+    height: 37vw;
+    position: absolute;
+    left: 60.7vw;
+    top: 8.8vw;
+    z-index: 3;
+}
 
 
 
 /* ---------------- RUNDER ------------------- */
 
-#runde1pige {}
+#runde1pige {
+    background-image: url(billeder/pige1bh.svg);
+    background-size: 100%;
+    width: 50vw;
+    height: 40vw;
+    position: absolute;
+    left: 7vw;
+    top: 3vw;
+    z-index: 3;
+
+}
 
 
-#runde2pige {}
+#runde2pige {
+    background-image: url(billeder/pige2pik.svg);
+    background-size: 100%;
+    width: 50vw;
+    height: 37vw;
+    position: absolute;
+    left: 8.5vw;
+    top: 8vw;
+    z-index: 3;
+}
 
 
-#runde1dreng {}
+#runde1dreng {
+    background-image: url(billeder/dreng1n%C3%B8genpige.svg);
+    background-size: 100%;
+    width: 50vw;
+    height: 37vw;
+    position: absolute;
+    left: 8.5vw;
+    top: 8vw;
+    z-index: 3;
+}
 
 
-#runde2dreng {}
+#runde2dreng {
+    background-image: url(billeder/dreng2pik.svg);
+    background-size: 100%;
+    width: 50vw;
+    height: 37vw;
+    position: absolute;
+    left: 8.5vw;
+    top: 8vw;
+    z-index: 3;
+}
 
 
-#rigtigtknap {}
+#rigtigtknap {
+    background-image: url(billeder/ikke_send_videre.svg);
+    background-size: 100%;
+    width: 20.9vw;
+    height: 13.2vw;
+    position: absolute;
+    left: 13vw;
+    top: 28vw;
+    z-index: 3;
+}
 
 
-#forkertknap {}
+#forkertknap {
+    background-image: url(billeder/send_videre.svg);
+    background-size: 100%;
+    width: 21vw;
+    height: 13.5vw;
+    position: absolute;
+    left: 32vw;
+    top: 27.5vw;
+    z-index: 3;
+}
 
 
-#rigtigtsvar {}
+#rigtigtsvar {
+    background-image: url(billeder/vinder_vindue.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 38.9vw;
+    position: absolute;
+    left: 8.5vw;
+    top: 8vw;
+    z-index: 3;
+}
 
 
-#forkertsvar {}
-
-
-/* ---------------- GAMEOVER ------------------- */
-
-#tabt {}
-
-
-#gameover {}
-
-
-#spil_igen {}
-
+#forkertsvar {
+    background-image: url(billeder/taber_%20popup.svg);
+    background-size: 100%;
+    width: 50vw;
+    height: 37.5vw;
+    position: absolute;
+    left: 8.5vw;
+    top: 8vw;
+    z-index: 3;
+}
 
 
 
-/* ---------------- LEVEL COMPLETE ------------------- */
 
 
-#vundet {}
+/* ---------------- SLUTSKÆRME ------------------- */
 
 
-#levelcomplete {}
+#endgame_lose {
+    background-image: url(billeder/taber_sk%C3%A6rm.svg);
+    background-size: 100%;
+    width: 100vw;
+    height: 54.70vw;
+    position: relative;
+}
+
+#spil_igen_pik_2 {
+    background-image: url(billeder/replay.svg);
+    background-size: 100%;
+    width: 10vw;
+    height: 11.6vw;
+    position: absolute;
+    top: 42vw;
+    left: 88vw;
+}
+
+#privat_snak_2 {
+    background-image: url(billeder/privatsnak.svg);
+    background-size: 100%;
+    width: 15vw;
+    height: 9vw;
+    position: absolute;
+    top: 19vw;
+    left: 14vw;
+}
 
 
-#spil_igen1 {}
-
-
-/* ---------------- SLUTSKÆRM ------------------- */
-
-
-#endgame {
-    background-image: url(billeder/vindersk%C3%A6rm.svg);
+#endgame_won {
+    background-image: url(billeder/vinder_sk%C3%A6rm.svg);
     background-size: 100%;
     width: 100vw;
     height: 54.70vw;
