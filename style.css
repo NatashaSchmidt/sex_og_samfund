@@ -41,6 +41,7 @@ body {
     position: absolute;
     top: 30vw;
     left: 58.2vw;
+    cursor: pointer;
 }
 
 #indstillinger_knap {
@@ -63,6 +64,7 @@ body {
 .show {
     visibility: visible;
 }
+
 
 .fade_out {
     animation-name: fade_in_kf;
@@ -93,7 +95,7 @@ body {
 
 .pulse {
     animation-name: pulse_kf;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in;
@@ -102,11 +104,11 @@ body {
 
 @keyframes pulse_kf {
     0% {
-        transform: scale(0.97);
+        transform: scale(0.70);
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(0.90);
     }
 }
 
@@ -253,6 +255,7 @@ body {
     position: absolute;
     top: 22.18vw;
     left: 19vw;
+    cursor: pointer;
 
 }
 
@@ -265,6 +268,7 @@ body {
     position: absolute;
     top: 24.54vw;
     left: 65.1vw;
+    cursor: pointer;
 }
 
 
@@ -297,13 +301,25 @@ body {
     left: 55vw;
     top: 1.5vw;
     z-index: 3;
+
+}
+
+.haand_animation {
     animation-name: haand_kf;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
 }
 
 @keyframes haand_kf {
-    0% {}
+    0% {
+        transform-origin: 400% 200%;
+        transform: rotate(-180deg);
+    }
 
-    100% {}
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 #lipstick {
@@ -472,6 +488,7 @@ body {
     left: 13vw;
     top: 28vw;
     z-index: 3;
+    cursor: pointer;
 }
 
 
@@ -484,6 +501,7 @@ body {
     left: 32vw;
     top: 27.5vw;
     z-index: 3;
+    cursor: pointer;
 }
 
 
@@ -496,6 +514,7 @@ body {
     left: 8.5vw;
     top: 8vw;
     z-index: 3;
+    cursor: pointer;
 }
 
 
@@ -508,6 +527,7 @@ body {
     left: 8.5vw;
     top: 8vw;
     z-index: 3;
+    cursor: pointer;
 }
 
 
@@ -533,6 +553,7 @@ body {
     position: absolute;
     top: 42vw;
     left: 88vw;
+    cursor: pointer;
 }
 
 #privat_snak_2 {
@@ -562,6 +583,7 @@ body {
     position: absolute;
     top: 42vw;
     left: 88vw;
+    cursor: pointer;
 }
 
 #privat_snak {
