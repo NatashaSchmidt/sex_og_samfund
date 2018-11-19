@@ -52,6 +52,7 @@ body {
     position: absolute;
     top: 0vw;
     left: 1vw;
+    cursor: pointer;
 }
 
 
@@ -188,7 +189,7 @@ body {
 }
 
 .off {
-    background-position: -400% 0;
+    background-position: 100% 0;
     /*    background-color: red;*/
 
 }
@@ -219,7 +220,25 @@ body {
     }
 
     100% {
-        background-position: -400% 0;
+        background-position: 100% 0;
+    }
+}
+
+
+.rotation {
+    animation-name: rotation_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes rotation_kf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -263,11 +282,11 @@ body {
     background-image: url(billeder/dreng.svg);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 15vw;
-    height: 26vw;
+    width: 13vw;
+    height: 24vw;
     position: absolute;
-    top: 24.54vw;
-    left: 65.1vw;
+    top: 25.6vw;
+    left: 66vw;
     cursor: pointer;
 }
 
@@ -538,7 +557,7 @@ body {
 
 
 #endgame_lose {
-    background-image: url(billeder/taber_sk%C3%A6rm.svg);
+    background-image: url(billeder/f%C3%A6ngsel_sk%C3%A6rm.svg);
     background-size: 100%;
     width: 100vw;
     height: 54.70vw;
@@ -564,6 +583,7 @@ body {
     position: absolute;
     top: 19vw;
     left: 14vw;
+    a: link: http: //privatsnak.dk/;
 }
 
 
