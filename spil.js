@@ -28,6 +28,9 @@ function showStart() {
     //NYT
     points = 0;
     runder = 2;
+    console.log(points);
+    console.log(runder);
+
     document.querySelector("#titel").classList.remove("hide");
     document.querySelector("#titelplay").classList.add("pulse");
     document.querySelector("#titelplay").addEventListener("click", hideStart);
@@ -279,6 +282,8 @@ function pigeRunde() {
     document.querySelector("#rigtigtsvar").removeEventListener("click", pigeRunde);
     document.querySelector("#forkertsvar").classList.add("hide");
     document.querySelector("#forkertsvar").removeEventListener("click", pigeRunde);
+    document.querySelector("#blyant").classList.add("hide");
+    document.querySelector("#eraser").classList.add("hide");
 
 
 
@@ -305,6 +310,13 @@ function pigeRunde() {
 function pigeValg() {
     console.log("pigeValg");
 
+    //RYD OP
+    document.querySelector("#besked2dreng").classList.add("hide");
+    document.querySelector("#runde2dreng").classList.add("hide");
+    document.querySelector("#besked1dreng").classList.add("hide");
+    document.querySelector("#runde1dreng").classList.add("hide");
+
+    //NYT
     if (runder == 2) {
 
         document.querySelector("#besked1pige").classList.remove("hide");
@@ -331,6 +343,9 @@ function clickRigtigtPige() {
         document.querySelector("#runde1pige").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
 
+        document.querySelector("#besked1dreng").classList.add("hide");
+        document.querySelector("#runde1dreng").classList.add("hide");
+
         //NYT
 
         document.querySelector("#svarmuligheder").classList.add("hide");
@@ -353,6 +368,9 @@ function clickRigtigtPige() {
         document.querySelector("#besked2pige").classList.add("hide");
         document.querySelector("#runde2pige").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
+
+        document.querySelector("#besked2dreng").classList.add("hide");
+        document.querySelector("#runde2dreng").classList.add("hide");
 
         //NYT
 
@@ -388,6 +406,9 @@ function clickForkertPige() {
         document.querySelector("#runde1pige").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
 
+        document.querySelector("#besked1dreng").classList.add("hide");
+        document.querySelector("#runde1dreng").classList.add("hide");
+
         //NYT
         document.querySelector("#svarmuligheder").classList.add("hide");
         document.querySelector("#forkertsvar").classList.remove("hide");
@@ -408,6 +429,9 @@ function clickForkertPige() {
         document.querySelector("#besked2pige").classList.add("hide");
         document.querySelector("#runde2pige").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
+
+        document.querySelector("#besked2dreng").classList.add("hide");
+        document.querySelector("#runde2dreng").classList.add("hide");
 
         //NYT
         document.querySelector("#svarmuligheder").classList.add("hide");
@@ -466,6 +490,9 @@ function drengeRunde() {
     document.querySelector("#rigtigtsvar").removeEventListener("click", drengeRunde);
     document.querySelector("#forkertsvar").classList.add("hide");
     document.querySelector("#forkertsvar").removeEventListener("click", drengeRunde);
+    document.querySelector("#lipstick").classList.add("hide");
+    document.querySelector("#pudder").classList.add("hide");
+    document.querySelector("#pin").classList.add("hide");
 
 
 
@@ -490,7 +517,17 @@ function drengeRunde() {
 function drengeValg() {
     console.log("drengeValg");
 
+    //RYD OP
+    document.querySelector("#besked2pige").classList.add("hide");
+    document.querySelector("#runde2pige").classList.add("hide");
+    document.querySelector("#besked1pige").classList.add("hide");
+    document.querySelector("#runde1pige").classList.add("hide");
+
+
+
+    //NYT
     if (runder == 2) {
+
 
         document.querySelector("#besked1dreng").classList.remove("hide");
         document.querySelector("#runde1dreng").classList.remove("hide");
@@ -518,6 +555,9 @@ function clickRigtigtDreng() {
         document.querySelector("#runde1dreng").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
 
+        document.querySelector("#besked1pige").classList.add("hide");
+        document.querySelector("#runde1pige").classList.add("hide");
+
         //NYT
         document.querySelector("#svarmuligheder").classList.add("hide");
         document.querySelector("#rigtigtsvar").classList.remove("hide");
@@ -539,6 +579,9 @@ function clickRigtigtDreng() {
         document.querySelector("#besked2dreng").classList.add("hide");
         document.querySelector("#runde2dreng").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
+
+        document.querySelector("#besked2pige").classList.add("hide");
+        document.querySelector("#runde2pige").classList.add("hide");
 
         //NYT
         document.querySelector("#svarmuligheder").classList.add("hide");
@@ -573,6 +616,9 @@ function clickForkertDreng() {
         document.querySelector("#runde1dreng").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
 
+        document.querySelector("#besked1pige").classList.add("hide");
+        document.querySelector("#runde1pige").classList.add("hide");
+
         //NYT
         document.querySelector("#svarmuligheder").classList.add("hide");
         document.querySelector("#forkertsvar").classList.remove("hide");
@@ -592,6 +638,9 @@ function clickForkertDreng() {
         document.querySelector("#besked2dreng").classList.add("hide");
         document.querySelector("#runde2dreng").classList.add("hide");
         document.querySelector("#haand").classList.add("hide");
+
+        document.querySelector("#besked2pige").classList.add("hide");
+        document.querySelector("#runde2pige").classList.add("hide");
 
         //NYT
         document.querySelector("#svarmuligheder").classList.add("hide");
@@ -696,8 +745,12 @@ function levelComplete() {
 function newGame() {
     console.log("newGame");
     //    document.getElementById("#screen").sidenVises();
-    document.querySelector("#spil_igen_pik_2").classList.remove("rotation");
-    document.querySelector("#spil_igen_pik").classList.remove("rotation");
 
-    sidenVises();
+    location = location.href;
+
+    //    document.querySelector("#spil_igen_pik_2").classList.remove("rotation");
+    //    document.querySelector("#spil_igen_pik").classList.remove("rotation");
+    //
+    //
+    //    sidenVises();
 }
